@@ -1,0 +1,84 @@
+<div class="container">
+  <div class="panel panel-success">
+    <div class="panel-heading">
+      <h2>Products</h2>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-md-2">
+          <label>Product ID</label>
+          <input type="text" class="form-control" />
+        </div>
+        <div class="col-md-2">
+          <label>Name</label>
+          <input type="text" class="form-control" />
+        </div>
+        <div class="col-md-2">
+          <label>Photo</label>
+          <input type="file" class="form-control" />
+        </div>
+        <div class="col-md-2">
+          <label>Category ID</label>
+          <input type="text" class="form-control" />
+        </div>
+        <div class="col-md-2">
+          <label>Description</label>
+          <textarea class="form-control"></textarea>
+        </div>
+        <div class="col-md-2">
+          <label>Price</label>
+          <input type="number" class="form-control" />
+        </div>
+        <div class="col-md-2">
+          <label>Offer Price</label>
+          <input type="number" class="form-control" />
+        </div>
+        <div class="col-md-2">
+          <br />
+          <button class="btn btn-success">Save</button>
+        </div>
+      </div>
+
+      <hr />
+
+      <h3>List Of Products</h3>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Photo</th>
+            <th>Category ID</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Offer Price</th>
+            <th>Options</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="obj in Products">
+            <td>{{obj.Name}}</td>
+            <td>
+              <img
+                ng-src="{{obj.PhotoUrl}}"
+                alt="Product Photo"
+                style="width: 50px; height: 50px"
+              />
+            </td>
+            <td>{{obj.CategoryId}}</td>
+            <td>{{obj.Description}}</td>
+            <td>{{obj.Price}}</td>
+            <td>{{obj.OfferPrice}}</td>
+            <td>
+              <a class="btn btn-success" ui-sref="ProductDetails"
+                >View Details</a
+              >
+              <button class="btn btn-danger" ng-click="deleteProduct(obj)">
+                Delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

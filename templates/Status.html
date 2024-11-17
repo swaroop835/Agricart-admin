@@ -1,0 +1,59 @@
+<div class="container">
+
+
+    <div class="panel panel-success">
+        <div class="panel-heading">
+            <h2>Status</h2>
+        </div>
+        <div class="panel-body">
+
+            <div class="row">
+                <div class="col-md-3">
+                    <label>State Name</label>
+                    <input type="text" class="form-control"><br>
+                    <label>Order</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="col-md-3">
+                    <br>
+                    <button class="btn btn-success"> Save</button>
+                </div>
+            </div>
+
+
+            <hr>
+
+            <h3>List Of Status</h3>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Order</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr ng-repeat="obj in Status">
+                    
+                      <td>{{obj.Name}}</td>
+                      <td>{{obj.Order}}</td>
+                      
+                      <td>
+                        <a class="btn btn-success" ui-sref="MerchantDetails"
+                          >View Details</a
+                        >
+                        <button class="btn btn-danger" ng-click="deleteMerchant(obj)">
+                          Delete
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                
+            </table>
+
+
+
+        </div>
+    </div>
+
+
+</div>

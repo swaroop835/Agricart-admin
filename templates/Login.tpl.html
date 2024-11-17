@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="loginApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body ng-controller="LoginController">
+
+    <div class="login-background">
+        <div class="login-container">
+            <div class="login-card">
+                <form ng-submit="Login()">
+                    <div class="logo-container">
+                        <img src="../images/agricart.png" alt="Logo" class="logo">
+                        <p><strong>Admin</strong></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fa fa-user"></i> Username</label>
+                        <input type="text" ng-model="User.UserName" placeholder="Username">
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fa fa-key"></i> Password</label>
+                        <input type="password" ng-model="User.Password" placeholder="Password">
+                    </div>
+
+                    <div class="button-container">
+                        <button type="submit">Login</button>
+                    </div>
+
+                    <div class="error-message" ng-if="loginError">
+                        <p>Username/Password Error!</p>
+                    </div>
+
+                    <div class="loading-message" ng-if="load">
+                        <img src="../images/load.jpg" alt="Loading...">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

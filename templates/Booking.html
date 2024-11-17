@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="panel panel-success">
+        <div class="panel-heading">
+            <h2 style="color: white;">Bookings</h2>
+        </div>
+        <div class="panel-body">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Date</th>
+                        <th>Customer Id</th>
+                        <th>Sub Total</th>
+                        <th>Total Discount</th>
+                        <th>Grand Total</th>
+                        <th>Payment Mode</th>
+                        <th>Payment Ref</th>
+                        <th>Status Id</th>
+                        <th>Remarks</th>
+                        <th>Options</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="obj in Bookings">
+                        <td>{{obj.Id}}</td>
+                        <td>{{obj.Date}}</td>
+                        <td>{{obj.Customer.Id}}</td>
+                        <td>{{obj.SubTotal}}</td>
+                        <td>{{obj.TotalDiscount}}</td>
+                        <td>{{obj.GrandTotal}}</td>
+                        <td>{{obj.PaymentMode}}</td>
+                        <td>{{obj.PaymentRef}}</td>
+                        <td>{{obj.Status.Id}}</td>
+                        <td>{{obj.Remarks}}</td>
+                        <td>
+                            <a class="btn btn-success" ui-sref="BookingDetails">View Details</a>
+                            <!--                            <button class="btn btn-danger" ng-click="deleteData(obj)">Delete</button>-->
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

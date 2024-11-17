@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body, html {
+    height: 100%;
+}
+
+.login-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: white;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    -webkit-box-shadow: 2px 2px 15px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 2px 15px -1px rgba(0, 0, 0, 0.75);
+    box-shadow: 2px 2px 15px -1px rgba(0, 0, 0, 0.75);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.login-card {
+    text-align: center;
+}
+
+.logo-container {
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+.button-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.button-container button:hover {
+    background-color: #218838;
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.loading-message img {
+    width: 20%;
+    margin-top: 10px;
+}
+
+
+.w-50 {
+    width: 50%;
+}
+
+.navbar-default {
+    background-color: #28a745;
+    border-color: #28a745;
+    border-radius: 0px;
+}
+
+.navbar-default .navbar-brand {
+    color: #fff;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+}
+
+.card {
+    padding: 2%;
+    margin: 1%;
+    border-radius: 20px;
+    -webkit-box-shadow: 1px 1px 15px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 1px 1px 15px -8px rgba(0, 0, 0, 0.75);
+    box-shadow: 1px 1px 15px -8px rgba(0, 0, 0, 0.75);
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #21a7e4;
+    border-color: #37a8ec;
+}
+
+.btn-success:hover {
+    color: #fff;
+    background-color: #268bb8;
+    border-color: #268bb8;
+}
+
+.btn-success:focus {
+    color: #fff;
+    background-color: #21a7e4;
+    border-color: #37a8ec;
+}

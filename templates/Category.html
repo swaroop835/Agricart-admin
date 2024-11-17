@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="panel panel-success">
+        <div class="panel-heading">
+            <h2 style="color: white;">Booking Details</h2>
+        </div>
+        <div class="panel-body">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Category ID</th>
+                        <th>Category Name</th>
+                        <th>Photo</th>
+                        <th>Product ID</th>
+                        <th>Options</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="obj in BookingDetails">
+                        <td>{{obj.Category.Id}}</td>
+                        <td>{{obj.Category.Name}}</td>
+                        <td>
+                            <img ng-src="{{obj.PhotoUrl}}" alt="Product Photo" style="width: 100px; height: auto;">
+                        </td>
+                        <td>{{obj.Product.Id}}</td>
+                        <td>
+                            <button class="btn btn-success" ng-click="editData(obj)">Edit</button>
+                            <button class="btn btn-danger" ng-click="deleteData(obj)">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,60 @@
+<script type="text/javascript">
+    $(document).ready(function() {
+        window.scrollTo(0, 0);
+    });
+
+</script>
+
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Agricart Admin</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="" ui-sref="home">Home</a></li>
+                <!-- <li><a href="" ui-sref="country">Country</a></li> -->
+                <!-- <li><a href="" ui-sref="state">State</a></li> -->
+                <li class="dropdown">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Masters <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+
+                        <li><a href="" ui-sref="state">State</a></li>
+                        <li><a href="" ui-sref="district">District</a></li>
+                        <li><a href="" ui-sref="Location">Location</a></li>
+                        <li><a href="" ui-sref="Products">Products</a></li>
+                        <li><a href="" ui-sref="Booking">Booking</a></li>
+                        <li><a href="" ui-sref="BookingDetails">BookingDetails</a></li>
+                        <li><a href="" ui-sref="Category">Category</a></li>
+                        <li><a href="" ui-sref="Feedback">Feedback</a></li>
+                        <li><a href="" ui-sref="Merchants">Merchants</a></li>
+                        <li><a href="" ui-sref="Farmers">Farmers</a></li>
+                        <li><a href="" ui-sref="Customer">Customer</a></li>
+                        <li><a href="" ui-sref="Status">Status</a></li>
+
+                    </ul>
+                </li>
+
+
+                <li><a href="" ng-click="logOut()">Logout</a></li>
+
+
+
+            </ul>
+        </div>
+
+
+    </div>
+</nav>
+
+
+
+
+<div ui-view="" class="bodydash"></div>

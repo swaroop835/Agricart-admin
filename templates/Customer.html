@@ -1,0 +1,96 @@
+<div class="container">
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <h2>Customers</h2>
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-2">
+            <label>Customer ID</label>
+            <input type="text" class="form-control" />
+          </div>
+          <div class="col-md-2">
+            <label>Name</label>
+            <input type="text" class="form-control" />
+          </div>
+          <div class="col-md-2">
+            <label>Photo</label>
+            <input type="file" class="form-control" />
+          </div>
+          <div class="col-md-2">
+            <label>Mobile No</label>
+            <input type="text" class="form-control" />
+          </div>
+          <div class="col-md-2">
+            <label>Email</label>
+            <input type="email" class="form-control" />
+          </div>
+          <div class="col-md-2">
+            <label>Address</label>
+            <input type="text" class="form-control" />
+          </div>
+          <div class="col-md-2">
+            <label>State ID</label>
+            <input type="text" class="form-control" />
+          </div>
+          <div class="col-md-2">
+            <label>District ID</label>
+            <input type="text" class="form-control" />
+          </div>
+          <div class="col-md-2">
+            <label>Location ID</label>
+            <input type="text" class="form-control" />
+          </div>
+          <div class="col-md-2">
+            <br />
+            <button class="btn btn-success">Save</button>
+          </div>
+        </div>
+  
+        <hr />
+  
+        <h3>List Of Customers</h3>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Photo</th>
+              <th>Mobile No</th>
+              <th>Email</th>
+              <th>Address</th>
+              <th>State ID</th>
+              <th>District ID</th>
+              <th>Location ID</th>
+              <th>Options</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="obj in Customers">
+              <td>{{obj.Name}}</td>
+              <td>
+                <img
+                  ng-src="{{obj.PhotoUrl}}"
+                  alt="Customer Photo"
+                  style="width: 50px; height: 50px"
+                />
+              </td>
+              <td>{{obj.MobileNo}}</td>
+              <td>{{obj.Email}}</td>
+              <td>{{obj.Address}}</td>
+              <td>{{obj.State.Id}}</td>
+              <td>{{obj.District.Id}}</td>
+              <td>{{obj.Location.Id}}</td>
+              <td>
+                <a class="btn btn-success" ui-sref="CustomerDetails"
+                  >View Details</a
+                >
+                <button class="btn btn-danger" ng-click="deleteCustomer(obj)">
+                  Delete
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>

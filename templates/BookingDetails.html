@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="panel panel-success">
+        <div class="panel-heading">
+            <h2 style="color: white;">Booking Details</h2>
+        </div>
+        <div class="panel-body">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Booking ID</th>
+                        <th>Id</th>
+                        <th>Product Id</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Offer Price</th>
+                        <th>Total</th>
+                        <th>Remarks</th>
+                        <th>Options</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="obj in BookingDetails">
+                        <td>{{obj.Booking.Id}}</td>
+                        <td>{{obj.Id}}</td>
+                        <td>{{obj.Product.Id}}</td>
+                        <td>{{obj.Quantity}}</td>
+                        <td>{{obj.Price}}</td>
+                        <td>{{obj.OfferPrice}}</td>
+                        <td>{{obj.Total}}</td>
+                        <td>{{obj.Remarks}}</td>
+                        <td>
+                            <button class="btn btn-success" ng-click="editData(obj)">Edit</button>
+                            <button class="btn btn-danger" ng-click="deleteData(obj)">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
